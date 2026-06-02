@@ -59,4 +59,5 @@ Contributions are welcome.
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project was developed for academic and learning purposes as part of CDAC coursework.
+
