@@ -5,6 +5,7 @@ import supli3 from "../images/supli3.jpg"
 import supli4 from "../images/supli4.jpg"
 
 import axios from "axios"
+import API_URL from "../config";
 const Shop=()=>
 {
 	const[cart,setCart]=useState([{productId:0,productName:"",description:"",productPic:"",price:0,count:0}])
@@ -26,7 +27,7 @@ const[product,setProduct]=useState([{productId:0,productName:"",description:"",p
   },[]);
 
   const retrieveAllProduct = async () => {
-    const response = await axios.get("http://localhost:8080/api/product/allproduct");
+    const response = await axios.get(`${API_URL}/api/product/allproduct`);
 
     return response.data;
   };

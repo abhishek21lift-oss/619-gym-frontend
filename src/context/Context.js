@@ -2,11 +2,12 @@ import { createContext, useContext, useReducer } from "react";
 import faker from "faker";
 import { cartReducer, productReducer } from "./Reducers";
 import axios from "axios"
+import API_URL from "../config";
 const Cart = createContext();
 faker.seed(99);
 
 const Context = ({ children }) => {
-  const products =axios.get("http://localhost:8080/api/product/allproduct");
+  const products =axios.get(`${API_URL}/api/product/allproduct`);
 
   const [state, dispatch] = useReducer(cartReducer, {
     products: products,
